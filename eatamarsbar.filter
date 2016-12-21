@@ -1,0 +1,13 @@
+Show
+    Sockets 6
+Show
+    LinkedSockets >= 4
+Show
+    Sockets >= 4
+    Rarity > Magic
+Show
+    Quality > 0
+Show
+    Class Map Currency Jewel Gem Card Flask Ring Amulet Labyrinth Breachstone
+Hide
+    Rarity < Rare
