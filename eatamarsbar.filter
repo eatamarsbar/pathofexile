@@ -1,13 +1,22 @@
 Show
-    Sockets 6
+    Sockets >= 5
 Show
     LinkedSockets >= 4
 Show
-    Sockets >= 4
+    SocketGroup RGB
+Show
+    Quality = 20
+    SetBackgroundColor 175 96 37
+Show
+    Class Currency Hideout Microtransaction Card Labyrinth Breachstone
+Show
+    Class Map
+Show
+    Class Jewel
+Show
+    Class Gem
+Show
+    Class Flasks Rings Amulets
     Rarity > Magic
-Show
-    Quality > 0
-Show
-    Class Map Currency Jewel Gem Card Flask Ring Amulet Labyrinth Breachstone
 Hide
     Rarity < Rare
