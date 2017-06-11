@@ -1,16 +1,21 @@
 Show
-    Sockets >= 5
-Show
+    Sockets 6
+Show # end-game
     LinkedSockets >= 4
-Show
+Show # chromatic
     SocketGroup RGB
 Show
     Quality = 20
     SetBackgroundColor 175 96 37
 Show
-    Class Currency Hideout Microtransaction Card Labyrinth Breachstone
+    Class Currency
+    SetFontSize 20
+Show # less important currency
+    Class Currency
+    BaseType "Portal Scroll" "Scroll of Wisdom"
+    SetFontSize 16
 Show
-    Class Map
+    Class Map Hideout Microtransaction Card Labyrinth
 Show
     Class Jewel
 Show
