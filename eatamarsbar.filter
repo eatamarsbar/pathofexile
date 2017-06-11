@@ -9,11 +9,10 @@ Show
     SetBackgroundColor 175 96 37
 Show
     Class Currency
-    SetFontSize 20
 Show # less important currency
     Class Currency
     BaseType "Portal Scroll" "Scroll of Wisdom"
-    SetFontSize 16
+    SetFontSize 24
 Show
     Class Map Hideout Microtransaction Card Labyrinth
 Show
@@ -21,7 +20,10 @@ Show
 Show
     Class Gem
 Show
-    Class Flasks Rings Amulets
-    Rarity > Magic
+    Class Flasks
+    SetFontSize 24
+Show # trinkets
+    Class Belts Rings Amulets
+    Rarity >= Magic
 Hide
     Rarity < Rare
