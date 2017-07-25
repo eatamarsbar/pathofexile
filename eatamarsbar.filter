@@ -1,29 +1,57 @@
+# ------------------------------
+# -- Vendor
+# ------------------------------
+# Jeweller's Orb
 Show
     Sockets 6
-Show # end-game
-    LinkedSockets >= 4
-Show # chromatic
+    SetBorderColor 170 158 120
+    SetFontSize 28
+# Chromatic Orb
+Show
+    LinkedSockets >= 3
     SocketGroup RGB
+    SetBorderColor 170 158 120
 Show
     Quality = 20
-    SetBackgroundColor 175 96 37
-Show
-    Class Currency
-Show # less important currency
-    Class Currency
-    BaseType "Portal Scroll" "Scroll of Wisdom"
-    SetFontSize 24
-Show
-    Class Map Hideout Microtransaction Card Labyrinth
+    SetBorderColor 170 158 120
+# ------------------------------
+# -- Interests
+# ------------------------------
 Show
     Class Jewel
 Show
     Class Gem
 Show
     Class Flasks
+    SetFontSize 26
+# ------------------------------
+# Mid-Game Links
+Show
+    LinkedSockets >= 4
+    SetFontSize 26
+# ------------------------------
+# Early-Game Links
+Show
+    LinkedSockets >= 3
     SetFontSize 24
-Show # trinkets
-    Class Belts Rings Amulets
-    Rarity >= Magic
+# ------------------------------
+# -- Currency
+# ------------------------------
+Show
+    Class Currency
+    BaseType "Portal Scroll" "Scroll of Wisdom"
+    SetFontSize 26
+Show
+    Class Currency
+Show
+    Class Map Labyrinth
+Show
+    Class "Divination Card"
+    SetFontSize 28
+# ------------------------------
+# -- Other
+# ------------------------------
+Show
+    Class "Quest Item" Hideout Microtransaction Leaguestones
 Hide
     Rarity < Rare
