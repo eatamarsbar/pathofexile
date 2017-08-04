@@ -4,36 +4,16 @@
 # Jeweller's Orb
 Show
     Sockets 6
-    SetBorderColor 170 158 120
+    SetBorderColor 162 205 90
     SetFontSize 28
 # Chromatic Orb
 Show
     LinkedSockets >= 3
     SocketGroup RGB
-    SetBorderColor 170 158 120
+    SetBorderColor 162 205 90
 Show
     Quality = 20
-    SetBorderColor 170 158 120
-# ------------------------------
-# -- Interests
-# ------------------------------
-Show
-    Class Jewel
-Show
-    Class Gem
-Show
-    Class Flasks
-    SetFontSize 26
-# ------------------------------
-# Mid-Game Links
-Show
-    LinkedSockets >= 4
-    SetFontSize 26
-# ------------------------------
-# Early-Game Links
-Show
-    LinkedSockets >= 3
-    SetFontSize 24
+    SetBorderColor 162 205 90
 # ------------------------------
 # -- Currency
 # ------------------------------
@@ -48,6 +28,32 @@ Show
 Show
     Class "Divination Card"
     SetFontSize 28
+# ------------------------------
+# -- Interests
+# ------------------------------
+Show
+    Class Jewel
+Show
+    Class Gem
+Show
+    Class Flasks
+    SetFontSize 26
+# ------------------------------
+# End-Game Links
+Show
+    LinkedSockets >= 5
+    SetBorderColor 255 215 0
+    SetFontSize 30
+# ------------------------------
+# Mid-Game Links
+Show
+    LinkedSockets >= 4
+    SetFontSize 26
+# ------------------------------
+# Early-Game Links
+Show
+    LinkedSockets >= 3
+    SetFontSize 24
 # ------------------------------
 # -- Other
 # ------------------------------
