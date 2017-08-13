@@ -5,7 +5,6 @@
 Show
     Sockets 6
     SetBorderColor 162 205 90
-    SetFontSize 28
 # Chromatic Orb
 Show
     LinkedSockets >= 3
@@ -25,9 +24,10 @@ Show
     Class Currency
 Show
     Class Map Labyrinth
+    SetBorderColor 0 255 255
 Show
-    Class "Divination Card"
-    SetFontSize 28
+    Class Card
+    SetFontSize 30
 # ------------------------------
 # -- Interests
 # ------------------------------
@@ -39,21 +39,15 @@ Show
     Class Flasks
     SetFontSize 26
 # ------------------------------
+# Tier 0 Items
+Show
+    DropLevel >= 68
+# ------------------------------
 # End-Game Links
 Show
     LinkedSockets >= 5
     SetBorderColor 255 215 0
     SetFontSize 30
-# ------------------------------
-# Mid-Game Links
-Show
-    LinkedSockets >= 4
-    SetFontSize 26
-# ------------------------------
-# Early-Game Links
-Show
-    LinkedSockets >= 3
-    SetFontSize 24
 # ------------------------------
 # -- Other
 # ------------------------------
