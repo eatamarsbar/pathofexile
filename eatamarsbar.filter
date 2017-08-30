@@ -10,6 +10,7 @@ Show
     LinkedSockets >= 3
     SocketGroup RGB
     SetBorderColor 162 205 90
+# Quality
 Show
     Quality = 20
     SetBorderColor 162 205 90
@@ -17,20 +18,23 @@ Show
 # -- Currency
 # ------------------------------
 Show
-    Class Currency
-    BaseType "Portal Scroll" "Scroll of Wisdom"
-    SetFontSize 26
-Show
-    Class Currency
-Show
-    Class Map Labyrinth
-    SetBorderColor 0 255 255
+    Class Map Pantheon Labyrinth
+    SetBorderColor 0 255 255    
 Show
     Class Card
     SetFontSize 30
+Show
+    Class Currency
+    BaseType "Portal Scroll"
+    SetFontSize 26
+Show
+    Class Currency
 # ------------------------------
 # -- Interests
 # ------------------------------
+Show
+    Rarity Unique
+    SetFontSize 32
 Show
     Class Jewel
 Show
@@ -38,20 +42,21 @@ Show
 Show
     Class Flasks
     SetFontSize 26
-# ------------------------------
-# Tier 0 Items
 Show
-    DropLevel >= 68
-# ------------------------------
+    BaseType "Marble Amulet" "Blue Pearl Amulet" "Moonstone Ring" "Prismatic Ring" "Opal Ring" "Steel Ring"
+    SetBorderColor 135 206 235
 # End-Game Links
 Show
     LinkedSockets >= 5
     SetBorderColor 255 215 0
     SetFontSize 30
+# Good Bases
+Show
+    DropLevel >= 60
 # ------------------------------
 # -- Other
 # ------------------------------
 Show
-    Class "Quest Item" Hideout Microtransaction Leaguestones
+    Class "Quest Item" Hideout Microtransaction
 Hide
     Rarity < Rare
