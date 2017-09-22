@@ -4,16 +4,16 @@
 # Jeweller's Orb
 Show
     Sockets 6
-    SetBorderColor 162 205 90
+    SetBackgroundColor 0 73 0
 # Chromatic Orb
 Show
     LinkedSockets >= 3
     SocketGroup RGB
-    SetBorderColor 162 205 90
+    SetBackgroundColor 0 73 0
 # Quality
 Show
-    Quality = 20
-    SetBorderColor 162 205 90
+    Quality >= 15
+    SetBackgroundColor 0 73 0
 # ------------------------------
 # -- Currency
 # ------------------------------
@@ -24,39 +24,46 @@ Show
     Class Card
     SetFontSize 30
 Show
-    Class Currency
-    BaseType "Portal Scroll"
+    BaseType "Portal Scroll" "Scroll of Wisdom"
     SetFontSize 26
 Show
     Class Currency
 # ------------------------------
 # -- Interests
 # ------------------------------
+# GGBBQ
+Show
+    LinkedSockets >= 5
+    SetBackgroundColor 254 191 128
+    SetFontSize 34
 Show
     Rarity Unique
-    SetFontSize 32
+    SetFontSize 34
 Show
     Class Jewel
+    SetBorderColor 170 158 130
+Show
+    BaseType "Pig-Faced Bascinet" "Nightmare Bascinet" "Dragonscale Doublet" "Dragonscale Gauntlets" "Dragonscale Boots" "Ezomyte Tower Shield" "Elegant Round Shield" "Nightmare Mace" "Auric Mace" "Runic Hatchet" "Reaver Axe" "Royal Axe"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Rustic Sash" "Leather Belt"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Turquoise Amulet" "Amethyst Ring" "Marble Amulet" "Blue Pearl Amulet" "Opal Ring" "Steel Ring"
+    SetBorderColor 184 218 242
 Show
     Class Gem
 Show
     Class Flasks
     SetFontSize 26
-Show
-    BaseType "Marble Amulet" "Blue Pearl Amulet" "Moonstone Ring" "Prismatic Ring" "Opal Ring" "Steel Ring"
-    SetBorderColor 135 206 235
-# End-Game Links
-Show
-    LinkedSockets >= 5
-    SetBorderColor 255 215 0
-    SetFontSize 30
 # Good Bases
 Show
+    Rarity >= Rare
     DropLevel >= 60
+Show
+    Class Quest Hideout Microtransaction
 # ------------------------------
 # -- Other
 # ------------------------------
-Show
-    Class "Quest Item" Hideout Microtransaction
 Hide
     Rarity < Rare
