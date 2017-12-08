@@ -1,67 +1,62 @@
 # ------------------------------
+# -- Generic
+# ------------------------------
+Show
+    BaseType "Portal Scroll" "Scroll of Wisdom"
+    SetFontSize 26
+Show
+    Class Flasks
+    SetFontSize 26
+Show
+    Class Quest Hideout Microtransaction Card Labyrinth Piece Abyss
+Show
+    Class Currency
+# ------------------------------
 # -- Vendor
 # ------------------------------
 # Jeweller's Orb
 Show
     Sockets 6
-    SetBackgroundColor 0 73 0
+    SetBackgroundColor 0 100 150
 # Chromatic Orb
 Show
     LinkedSockets >= 3
     SocketGroup RGB
-    SetBackgroundColor 0 73 0
+    SetBackgroundColor 0 100 150
 # Quality
 Show
-    Quality >= 15
-    SetBackgroundColor 0 73 0
+    Quality 20
+    SetBackgroundColor 0 100 150
 # ------------------------------
-# -- Currency
+# -- Maps
 # ------------------------------
 Show
-    Class Map Pantheon Labyrinth
-    SetBorderColor 0 255 255    
-Show
-    Class Card
-    SetFontSize 30
-Show
-    BaseType "Portal Scroll" "Scroll of Wisdom"
-    SetFontSize 26
-Show
-    Class Currency
+    Class Map Pantheon 
+    SetBorderColor 50 230 100
 # ------------------------------
 # -- Interests
 # ------------------------------
 # GGBBQ
 Show
     LinkedSockets >= 5
-    SetBackgroundColor 254 191 128
-    SetFontSize 34
+    SetBackgroundColor 74 0 160
+    SetFontSize 36
 Show
     Rarity Unique
-    SetFontSize 34
+    SetFontSize 36
 Show
     Class Jewel
-    SetBorderColor 170 158 130
-Show
-    BaseType "Pig-Faced Bascinet" "Nightmare Bascinet" "Dragonscale Doublet" "Dragonscale Gauntlets" "Dragonscale Boots" "Ezomyte Tower Shield" "Elegant Round Shield" "Nightmare Mace" "Auric Mace" "Runic Hatchet" "Reaver Axe" "Royal Axe"
     SetBorderColor 184 218 242
 Show
-    BaseType "Rustic Sash" "Leather Belt"
+    BaseType "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Imperial Claw" "Terror Claw" "Gemini Claw"
     SetBorderColor 184 218 242
 Show
-    BaseType "Turquoise Amulet" "Amethyst Ring" "Marble Amulet" "Blue Pearl Amulet" "Opal Ring" "Steel Ring"
+    BaseType "Steel Ring"
     SetBorderColor 184 218 242
 Show
     Class Gem
-Show
-    Class Flasks
-    SetFontSize 26
-# Good Bases
-Show
-    Rarity >= Rare
-    DropLevel >= 60
-Show
-    Class Quest Hideout Microtransaction
+    Quality >= 10
+    SetBorderColor 184 218 242
 # ------------------------------
 # -- Other
 # ------------------------------
