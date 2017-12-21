@@ -2,15 +2,59 @@
 # -- Generic
 # ------------------------------
 Show
-    BaseType "Portal Scroll" "Scroll of Wisdom"
-    SetFontSize 26
-Show
-    Class Flasks
-    SetFontSize 26
-Show
     Class Quest Hideout Microtransaction Card Labyrinth Piece Abyss
+Hide
+    BaseType "Scroll of Wisdom"
 Show
     Class Currency
+Hide
+    BaseType Flask
+    Quality < 10
+    Rarity < Rare
+Show
+    BaseType Flask
+# ------------------------------
+# -- Interests
+# ------------------------------
+# GGBBQ
+Show
+    LinkedSockets >= 5
+    SetBorderColor 210 0 220
+    SetFontSize 36
+Show
+    BaseType "Steel Ring"
+    SetBorderColor 210 0 220
+Show
+    Rarity Unique
+    SetFontSize 36
+Show
+    Class Jewel
+    SetBorderColor 184 218 242
+Show
+    BaseType "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Imperial Claw" "Terror Claw" "Gemini Claw"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Stealth Boots" "Slink Boots"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Stealth Gloves" "Slink Gloves" "Gripped Gloves"
+    SetBorderColor 184 218 242
+Show
+    BaseType "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+    SetBorderColor 184 218 242
+Show
+    Class Gem
+    Quality >= 10
+    SetBorderColor 184 218 242
+Show
+    ElderItem True
+    SetBorderColor 184 218 242
+Show
+    ShaperItem True
+    SetBorderColor 184 218 242
 # ------------------------------
 # -- Vendor
 # ------------------------------
@@ -31,32 +75,8 @@ Show
 # -- Maps
 # ------------------------------
 Show
-    Class Map Pantheon 
+    Class Map Pantheon
     SetBorderColor 50 230 100
-# ------------------------------
-# -- Interests
-# ------------------------------
-# GGBBQ
-Show
-    LinkedSockets >= 5
-    SetBackgroundColor 74 0 160
-    SetFontSize 36
-Show
-    Rarity Unique
-    SetFontSize 36
-Show
-    Class Jewel
-    SetBorderColor 184 218 242
-Show
-    BaseType "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Imperial Claw" "Terror Claw" "Gemini Claw"
-    SetBorderColor 184 218 242
-Show
-    BaseType "Steel Ring"
-    SetBorderColor 184 218 242
-Show
-    Class Gem
-    Quality >= 10
-    SetBorderColor 184 218 242
 # ------------------------------
 # -- Other
 # ------------------------------
