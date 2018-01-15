@@ -1,82 +1,137 @@
+# Pick-up:  0 191 0 | 114 0 83
+# Desirable: 254 213 0 | 0 0 128 | 0 73 0
+# Skip: 191 0 0
+
 # ------------------------------
 # -- Generic
 # ------------------------------
 Show
-    Class Quest Hideout Microtransaction Card Labyrinth Piece Abyss
-Hide
-    BaseType "Scroll of Wisdom"
+    Rarity Unique
+    SetFontSize 40
+
+# Flasks
 Show
-    Class Currency
+    Class "Utility Flask"
 Hide
     BaseType Flask
     Quality < 10
-    Rarity < Rare
 Show
     BaseType Flask
+
+# Gems
+Show
+    Class Gem
+    Quality >= 10
+    SetTextColor 128 179 254
+    SetBackgroundColor 0 0 128
+Show
+    Class Gem
+
+# Currency
+Hide
+    BaseType "Scroll of Wisdom"
+Show
+    BaseType "Chaos Orb" "Orb of Alchemy" "Orb of Fusing" "Jeweller's Orb" "Chromatic Orb" "Cartographer's Chisel"
+    SetTextColor 254 128 222
+    SetBackgroundColor 114 0 83
+Show
+    Class Map Pantheon
+    SetBackgroundColor 114 0 83
+Show
+    Class Quest
+    SetFontSize 40
+Show
+    Class Currency Hideout Microtransaction Card Labyrinth Piece Abyss
+
 # ------------------------------
 # -- Interests
 # ------------------------------
 # GGBBQ
 Show
     LinkedSockets >= 5
-    SetBorderColor 210 0 220
-    SetFontSize 36
+    SetBorderColor 0 191 0
+    SetFontSize 40
+
+# Rare Bases
 Show
-    BaseType "Steel Ring"
-    SetBorderColor 210 0 220
-Show
-    Rarity Unique
-    SetFontSize 36
+    BaseType "Prismatic Ring" "Steel Ring" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+    SetBorderColor 0 191 0
+
 Show
     Class Jewel
-    SetBorderColor 184 218 242
+    SetBackgroundColor 0 0 128
+
+## Juggernaut Bases
+#Show
+#    BaseType "Piledriver" "Meatgrinder" "Imperial Maul" "Terror Maul"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Astral Plate" "Gladiator Plate" "Glorious Plate"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Vaal Greaves" "Titan Greaves"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Vaal Gauntlets" "Titan Gauntlets"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Ezomyte Burgonet" "Royal Burgonet" "Eternal Burgonet"
+#    SetBorderColor 254 213 0
+
+## Raider Bases
+#Show
+#    BaseType "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Imperial Claw" "Terror Claw" "Gemini Claw"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Stealth Boots" "Slink Boots"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Stealth Gloves" "Slink Gloves"
+#    SetBorderColor 254 213 0
+#Show
+#    BaseType "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+#    SetBorderColor 254 213 0
+
+# Witch Bases
 Show
-    BaseType "Throat Stabber" "Hellion's Paw" "Eye Gouger" "Imperial Claw" "Terror Claw" "Gemini Claw"
-    SetBorderColor 184 218 242
+    BaseType "Opal Wand" "Tornado Wand" "Prophecy Wand" "Profane Wand"
+    SetBorderColor 254 213 0
 Show
-    BaseType "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
-    SetBorderColor 184 218 242
+    BaseType "Occultist's Vestment" "Widowsilk Robe" "Vaal Regalia"
+    SetBorderColor 254 213 0
 Show
-    BaseType "Stealth Boots" "Slink Boots"
-    SetBorderColor 184 218 242
+    BaseType "Arcanist Slippers" "Sorcerer Boots"
+    SetBorderColor 254 213 0
 Show
-    BaseType "Stealth Gloves" "Slink Gloves" "Gripped Gloves"
-    SetBorderColor 184 218 242
+    BaseType "Arcanist Gloves" "Sorcerer Gloves"
+    SetBorderColor 254 213 0
 Show
-    BaseType "Silken Hood" "Sinner Tricorne" "Lion Pelt"
-    SetBorderColor 184 218 242
+    BaseType "Mind Cage" "Hubris Circlet"
+    SetBorderColor 254 213 0
 Show
-    Class Gem
-    Quality >= 10
-    SetBorderColor 184 218 242
-Show
-    ElderItem True
-    SetBorderColor 184 218 242
-Show
-    ShaperItem True
-    SetBorderColor 184 218 242
+    BaseType "Vaal Spirit Shield" "Harmonic Spirit Shield" "Titanium Spirit Shield"
+    SetBorderColor 254 213 0
+
 # ------------------------------
 # -- Vendor
 # ------------------------------
 # Jeweller's Orb
 Show
     Sockets 6
-    SetBackgroundColor 0 100 150
+    SetBackgroundColor 0 73 0
+# Quality (3x20% = Orb of Alchemy)
+Show
+    Quality 20
+    SetBackgroundColor 0 73 0
 # Chromatic Orb
 Show
     LinkedSockets >= 3
     SocketGroup RGB
-    SetBackgroundColor 0 100 150
-# Quality
-Show
-    Quality 20
-    SetBackgroundColor 0 100 150
-# ------------------------------
-# -- Maps
-# ------------------------------
-Show
-    Class Map Pantheon
-    SetBorderColor 50 230 100
+    SetBackgroundColor 0 73 0
+
 # ------------------------------
 # -- Other
 # ------------------------------
