@@ -1,22 +1,494 @@
+# "Continue" is used to create additive filters.
+# The last filter in a "Continue" chain has highest priority.
+
+# ------------------------------
+# -- Final
+# ------------------------------
+
 Show
-    Sockets >= 5
+    Class Quest
+    SetFontSize 42
+    SetTextColor 0 255 0
+
+# ------------------------------
+# -- Vendor Recipes (Additive)
+# ------------------------------
+# SetBackgroundColor 8 24 81
+# PlayAlertSound 2 100
+
+# Jeweller's Orb
 Show
-    LinkedSockets >= 4
-Show
-    SocketGroup RGB
-Show
-    Quality = 20
-    SetBackgroundColor 175 96 37
-Show
-    Class Currency Hideout Microtransaction Card Labyrinth Breachstone
-Show
-    Class Map
-Show
-    Class Jewel
+    Sockets 6
+    SetBackgroundColor 8 24 81
+    PlayAlertSound 2 100
+    Continue
+
+# Gemcutter Prism
 Show
     Class Gem
+    Quality >= 10
+    SetBackgroundColor 8 24 81
+    PlayAlertSound 2 100
+    Continue
+    
+# Glassblower's Bauble
 Show
-    Class Flasks Rings Amulets
-    Rarity > Magic
+    Class Flask
+    Quality >= 10
+    SetBackgroundColor 8 24 81
+    PlayAlertSound 2 100
+    Continue
+
+# Chromatic Orb
+Show
+    LinkedSockets >= 3
+    SocketGroup RGB
+    SetBackgroundColor 8 24 81
+    PlayAlertSound 2 100
+    Continue
+
+# ------------------------------
+# -- Notable (Additive)
+# ------------------------------
+# -- Sockets:
+# PlayAlertSound 2 100
+# MinimapIcon 2 Grey Hexagon
+
+# -- Uniques:
+# PlayEffect Brown
+# PlayAlertSound 1 300
+# MinimapIcon 2 Red Star
+
+# Quality Flasks
+Show
+    Class Flask
+    Quality >= 20
+    PlayAlertSound 3 100
+    PlayEffect Blue
+    MinimapIcon 2 Blue Raindrop
+    Continue
+
+# Quality Gems
+Show
+    Class Gem
+    Quality = 20
+    PlayEffect Blue
+    PlayAlertSound 3 100
+    MinimapIcon 2 Blue Raindrop
+    Continue
+
+# Super Quality Gems
+Show
+    Class Gem
+    Quality >= 21
+    PlayEffect Cyan
+    PlayAlertSound 5 100
+    MinimapIcon 2 Cyan Raindrop
+    Continue
+
+# Super Leveled Gems
+Show
+    Class Gem
+    GemLevel >= 21
+    PlayEffect Cyan
+    PlayAlertSound 5 100
+    MinimapIcon 2 Cyan Raindrop
+    Continue
+
+# Alternate Gems
+Show
+    Class Gem
+    GemQualityType Divergent Anomalous Phantasmal
+    PlayEffect Cyan
+    PlayAlertSound 5 100
+    MinimapIcon 2 Cyan Raindrop
+    Continue
+
+# Enchanted
+Show
+    AnyEnchantment True
+    PlayEffect Blue
+    PlayAlertSound 3 100
+    MinimapIcon 2 Blue Moon
+    Continue
+
+# Influenced
+Show
+    HasInfluence Shaper Elder Crusader Hunter Redeemer Warlord
+    PlayEffect Blue
+    PlayAlertSound 5 100
+    MinimapIcon 2 Blue Cross
+    Continue
+
+# 6-Socket
+Show
+    Sockets 6
+    PlayEffect Grey
+    MinimapIcon 2 Grey Hexagon
+    Continue
+
+# Uniques
+Show
+    Rarity Unique
+    SetFontSize 42
+    #SetTextColor 200 150 75 
+    PlayEffect Brown
+    PlayAlertSound 1 300
+    MinimapIcon 2 Red Star
+    Continue
+
+# 6-Socket Unique
+Show
+    Rarity Unique
+    Sockets 6
+    MinimapIcon 2 Red Hexagon
+    Continue
+
+# 6-Link
+Show
+    Rarity >= Normal
+    Sockets 6
+    LinkedSockets 6
+    SetFontSize 42
+    PlayEffect Purple
+    PlayAlertSound 1 300
+    MinimapIcon 2 Purple Hexagon
+    Continue
+
+
+
+# (!) SECTIONS AFTER THIS ARE NOT ADDITIVE (!)
+# (!) SECTIONS AFTER THIS ARE NOT ADDITIVE (!)
+# (!) SECTIONS AFTER THIS ARE NOT ADDITIVE (!)
+
+
+
+# ------------------------------
+# -- Flasks
+# ------------------------------
+# Quality Flasks
+Show
+    Class Flask
+    Quality >= 20
+
+Show
+    BaseType "Divine Life Flask" "Eternal Life Flask" "Divine Mana Flask" "Eternal Mana Flask"
+
+Show
+    Class "Utility Flask"
+
+# ------------------------------
+# -- Gems
+# ------------------------------
+
+# Corrupted Gems
+Show
+    Class Gem
+    Corrupted True
+
+# Quality Gems
+Show
+    Class Gem
+    Quality >= 20
+
+# Alternate Gems
+Show
+    Class Gem
+    GemQualityType Divergent Anomalous Phantasmal
+
+# Leveled Gems
+Show
+    Class Gem
+    GemLevel >= 15
+
+# ------------------------------
+# -- Currency
+# ------------------------------
+
+# nom nom nom nom nom
+Show
+    Class Currency
+    BaseType "Exalted Orb" "Divine Orb" "Mirror of Kalandra"
+    SetFontSize 42
+    SetTextColor 250 100 50
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 6 300
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+# nom nom nom
+Show
+    Class Currency
+    BaseType "Orb of Alchemy" "Chaos Orb" "Vaal Orb" "Orb of Regret" "Orb of Annulment" "Blessed Orb" "Sacred Orb" "Orb of Scouring" "Orb of Horizons" "Orb of Binding"
+    SetFontSize 36
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 2 100
+    PlayEffect White Temp
+    MinimapIcon 2 White Circle
+
+# nom nom
+Show
+    Class Currency
+    BaseType "Orb of Alteration" "Orb of Chance" "Regal Orb" "Glassblower's Bauble" "Gemcutter's Prism" "Cartographer's Chisel" "Instilling Orb" "Enkindling Orb"
+    SetFontSize 36
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 2 100
+    PlayEffect Grey Temp
+    MinimapIcon 2 Grey Circle
+
+# nom
+Show
+    Class Currency
+    BaseType "Orb of Transmutation" "Orb of Augmentation" "Chromatic Orb" "Jeweller's Orb" "Orb of Fusing" "Armourer's Scrap" "Blacksmith's Whetstone"
+    SetFontSize 36
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 2 100
+    PlayEffect Grey Temp
+
+
+Show
+    Class Currency
+    BaseType "Portal Scroll"
+    SetBorderColor 0 0 150
+
+Show
+    Class Currency
+    BaseType "Scroll of Wisdom"
+    SetBorderColor 150 0 0
+
+# Safety (God-Tier)
+Show
+    Class Currency
+    DropLevel >= 65
+    SetFontSize 42
+    SetTextColor 250 100 50
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 6 300
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+# Safety
+Show
+    Class Currency
+
+# ------------------------------
+# -- Cards
+# ------------------------------
+
+Show
+    BaseType "Stacked Deck"
+    SetTextColor 250 0 200
+    SetBackgroundColor 60 0 30
+    PlayAlertSound 2 100
+    PlayEffect Pink Temp
+    MinimapIcon 2 Pink Triangle
+
+Show
+    Class Divination
+    SetTextColor 250 0 200
+    SetBackgroundColor 60 0 30
+    PlayAlertSound 2 100
+    PlayEffect Pink Temp
+    MinimapIcon 2 Pink Triangle
+
+# ------------------------------
+# -- Maps
+# ------------------------------
+
+Show
+    Class Map
+    Rarity Unique
+    SetFontSize 42
+    SetTextColor 220 150 0
+    SetBackgroundColor 81 81 81
+    SetBorderColor 220 150 0
+    PlayEffect Brown
+    PlayAlertSound 1 100
+    MinimapIcon 2 Brown Square
+
+Show
+    Class Map
+    MapTier >= 11
+    SetFontSize 42
+    SetTextColor 220 0 0
+    SetBackgroundColor 81 81 81
+    SetBorderColor 220 0 0
+    PlayEffect Red
+    PlayAlertSound 5 100
+    MinimapIcon 2 Red Square
+
+Show
+    Class Map
+    MapTier >= 6
+    SetTextColor 200 180 0
+    SetBackgroundColor 81 81 81
+    SetBorderColor 200 180 0
+    PlayEffect Yellow Temp
+    PlayAlertSound 4 100
+    MinimapIcon 2 Yellow Square
+
+Show
+    Class Map
+    SetTextColor 200 200 200
+    SetBackgroundColor 81 81 81
+    SetBorderColor 200 200 200
+    PlayEffect White Temp
+    PlayAlertSound 4 100
+    MinimapIcon 2 White Square
+
+# ------------------------------
+# -- Bases
+# ------------------------------
+# -- Super Good Base:
+# SetBorderColor 180 90 24
+# -- Good Base:
+# SetBorderColor 120 60 8
+# -- Map Start Base:
+# <none>
+
+# Caster 1H
+Show
+    BaseType "Opal Wand" "Profane Wand"
+    ItemLevel >= 86 # T1 mods
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Opal Wand" "Tornado Wand" "Prophecy Wand" "Profane Wand"
+    ItemLevel >= 68
+
+# Belts
+Show
+    Class Belts
+    ItemLevel >= 80 # T1 +ES
+    SetBorderColor 180 90 24
+
+Show
+    Class Belts
+
+# Rings
+Show
+    Class Rings
+    ItemLevel >= 80 # Curse on Hit
+    SetBorderColor 180 90 24
+
+Show
+    Class Rings
+    ItemLevel >= 74 # T1 +ES
+    SetBorderColor 120 60 8
+
+Show
+    Class Rings
+
+# Amulets
+Show
+    Class Amulets
+    ItemLevel >= 80 # T1 +ES
+    SetBorderColor 180 90 24
+
+Show
+    Class Amulets
+    ItemLevel >= 77 # T1 %ES
+    SetBorderColor 120 60 8
+
+Show
+    Class Amulets
+
+# Jewels
+Show
+    Class Jewel
+    ItemLevel >= 84 # T1 everything
+    SetBorderColor 180 90 24
+
+Show
+    Class Jewel
+    ItemLevel >= 68
+    SetBorderColor 120 60 8
+
+# ------------------------------
+# -- Occultist Bases
+# ------------------------------
+Show
+    BaseType "Vaal Regalia"
+    ItemLevel >= 86 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Vaal Regalia" "Widowsilk Robe"
+    ItemLevel >= 75 # T1 +def
+    SetBorderColor 120 60 8
+
+Show
+    BaseType "Titanium Spirit Shield"
+    ItemLevel >= 86 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Titanium Spirit Shield" "Thorium Spirit Shield"
+    ItemLevel >= 69 # T1 +def
+    SetBorderColor 120 60 8
+
+Show
+    BaseType "Hubris Circlet" "Sorcerer Boots" "Sorcerer Gloves"
+    ItemLevel >= 84 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Hubris Circlet" "Sorcerer Boots" "Sorcerer Gloves" "Mind Cage" "Arcanist Slippers" "Arcanist Gloves"
+    ItemLevel >= 68 # T1 +def
+    SetBorderColor 120 60 8
+
+# ------------------------------
+# -- Trickster Bases
+# ------------------------------
+Show
+    BaseType "Sadist Garb"
+    ItemLevel >= 86 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Sadist Garb" "Blood Raiment"
+    ItemLevel >= 79 # T1 +def
+    SetBorderColor 120 60 8
+
+Show
+    BaseType "Supreme Spiked Shield"
+    ItemLevel >= 86 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Supreme Spiked Shield"
+    ItemLevel >= 69 # T1 +def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Deicide Mask" "Murder Boots" "Murder Mitts"
+    ItemLevel >= 84 # T1 %def
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Deicide Mask" "Murder Boots" "Murder Mitts" "Vaal Mask" "Assassin's Boots" "Assassin's Mitts"
+    ItemLevel >= 68 # T1 +def
+    SetBorderColor 120 60 8
+
+# ------------------------------
+# -- Equipment
+# ------------------------------
+
+# 6-Socket
+Show
+    Sockets 6
+
+# Influenced
+Show
+    HasInfluence Shaper Elder Crusader Hunter Redeemer Warlord
+
+# ------------------------------
+# -- Other
+# ------------------------------
+
+Show
+    Class Atlas Blueprints Contracts Delve Expedition Fishing Heist Hideout Incubators Incursion Labyrinth Leaguestones Metamorph Microtransactions Misc Souls Pieces Trinkets
+    #Class Atlas Blueprints Contracts Delve Expedition Fishing Heist Hideout Incubators Incursion Labyrinth Leaguestones Lifeforce Metamorph Microtransactions Misc Oil Souls Pieces Trinkets
+    
 Hide
-    Rarity < Rare
+    Rarity <= Rare
