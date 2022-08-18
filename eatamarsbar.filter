@@ -64,23 +64,24 @@ Show
     Class Flask
     Quality >= 20
     PlayAlertSound 3 100
-    PlayEffect Blue
-    MinimapIcon 2 Blue Raindrop
+    PlayEffect Cyan
+    MinimapIcon 2 Cyan Raindrop
     Continue
 
 # Quality Gems
 Show
     Class Gem
     Quality = 20
-    PlayEffect Blue
+    PlayEffect Cyan
     PlayAlertSound 3 100
-    MinimapIcon 2 Blue Raindrop
+    MinimapIcon 2 Cyan Raindrop
     Continue
 
 # Super Quality Gems
 Show
     Class Gem
     Quality >= 21
+    SetFontSize 36
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -90,6 +91,7 @@ Show
 Show
     Class Gem
     GemLevel >= 21
+    SetFontSize 36
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -99,6 +101,7 @@ Show
 Show
     Class Gem
     GemQualityType Divergent Anomalous Phantasmal
+    SetFontSize 36
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -108,7 +111,7 @@ Show
 Show
     AnyEnchantment True
     PlayEffect Blue
-    PlayAlertSound 3 100
+    PlayAlertSound 13 300
     MinimapIcon 2 Blue Moon
     Continue
 
@@ -116,7 +119,7 @@ Show
 Show
     HasInfluence Shaper Elder Crusader Hunter Redeemer Warlord
     PlayEffect Blue
-    PlayAlertSound 5 100
+    PlayAlertSound 13 300
     MinimapIcon 2 Blue Cross
     Continue
 
@@ -133,7 +136,7 @@ Show
     SetFontSize 42
     #SetTextColor 200 150 75 
     PlayEffect Brown
-    PlayAlertSound 1 300
+    PlayAlertSound 16 300
     MinimapIcon 2 Red Star
     Continue
 
@@ -144,9 +147,20 @@ Show
     MinimapIcon 2 Red Hexagon
     Continue
 
+# 6-Link (Base)
+Show
+    Rarity <= Magic
+    Sockets 6
+    LinkedSockets 6
+    SetFontSize 42
+    PlayEffect Blue
+    PlayAlertSound 13 300
+    MinimapIcon 2 Blue Hexagon
+    Continue
+
 # 6-Link
 Show
-    Rarity >= Normal
+    Rarity >= Rare
     Sockets 6
     LinkedSockets 6
     SetFontSize 42
@@ -154,8 +168,6 @@ Show
     PlayAlertSound 1 300
     MinimapIcon 2 Purple Hexagon
     Continue
-
-
 
 # (!) SECTIONS AFTER THIS ARE NOT ADDITIVE (!)
 # (!) SECTIONS AFTER THIS ARE NOT ADDITIVE (!)
@@ -244,7 +256,6 @@ Show
     SetBackgroundColor 60 30 0
     PlayAlertSound 2 100
     PlayEffect Grey Temp
-
 
 Show
     Class Currency
