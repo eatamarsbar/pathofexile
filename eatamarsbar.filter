@@ -1,14 +1,21 @@
 # "Continue" is used to create additive filters.
 # The last filter in a "Continue" chain has highest priority.
 
+Show
+    SetFontSize 30
+    Continue
+
 # ------------------------------
 # -- Final
 # ------------------------------
 
 Show
     Class Quest
-    SetFontSize 42
-    SetTextColor 0 255 0
+    SetFontSize 50
+    SetBorderColor 0 150 0
+    SetBackgroundColor 0 60 0
+    PlayEffect Green Temp
+    PlayAlertSound 12 300
 
 # ------------------------------
 # -- Vendor Recipes (Additive)
@@ -71,7 +78,7 @@ Show
 # Quality Gems
 Show
     Class Gem
-    Quality = 20
+    Quality 20
     PlayEffect Cyan
     PlayAlertSound 3 100
     MinimapIcon 2 Cyan Raindrop
@@ -81,7 +88,7 @@ Show
 Show
     Class Gem
     Quality >= 21
-    SetFontSize 36
+    SetFontSize 40
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -91,7 +98,7 @@ Show
 Show
     Class Gem
     GemLevel >= 21
-    SetFontSize 36
+    SetFontSize 40
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -101,7 +108,7 @@ Show
 Show
     Class Gem
     GemQualityType Divergent Anomalous Phantasmal
-    SetFontSize 36
+    SetFontSize 40
     PlayEffect Cyan
     PlayAlertSound 5 100
     MinimapIcon 2 Cyan Raindrop
@@ -130,10 +137,18 @@ Show
     MinimapIcon 2 Grey Hexagon
     Continue
 
+# 5-Link
+    LinkedSockets 5
+    SetFontSize 50
+    PlayEffect Blue
+    PlayAlertSound 3 300
+    MinimapIcon 2 Blue Hexagon
+    Continue
+
 # Uniques
 Show
     Rarity Unique
-    SetFontSize 42
+    SetFontSize 50
     #SetTextColor 200 150 75 
     PlayEffect Brown
     PlayAlertSound 16 300
@@ -152,10 +167,10 @@ Show
     Rarity <= Magic
     Sockets 6
     LinkedSockets 6
-    SetFontSize 42
-    PlayEffect Blue
+    SetFontSize 50
+    PlayEffect Cyan
     PlayAlertSound 13 300
-    MinimapIcon 2 Blue Hexagon
+    MinimapIcon 2 Cyan Hexagon
     Continue
 
 # 6-Link
@@ -163,7 +178,7 @@ Show
     Rarity >= Rare
     Sockets 6
     LinkedSockets 6
-    SetFontSize 42
+    SetFontSize 50
     PlayEffect Purple
     PlayAlertSound 1 300
     MinimapIcon 2 Purple Hexagon
@@ -181,13 +196,11 @@ Show
 # Quality Flasks
 Show
     Class Flask
-    Quality >= 20
-
-Show
-    BaseType "Divine Life Flask" "Eternal Life Flask" "Divine Mana Flask" "Eternal Mana Flask"
+    Quality >= 10
 
 Show
     Class "Utility Flask"
+    SetBorderColor 0 150 150
 
 # ------------------------------
 # -- Gems
@@ -201,7 +214,7 @@ Show
 # Quality Gems
 Show
     Class Gem
-    Quality >= 20
+    Quality >= 10
 
 # Alternate Gems
 Show
@@ -220,21 +233,35 @@ Show
 # nom nom nom nom nom
 Show
     Class Currency
-    BaseType "Exalted Orb" "Divine Orb" "Mirror of Kalandra"
-    SetFontSize 42
+    BaseType "Divine Orb" "Mirror of Kalandra"
+    SetFontSize 50
     SetTextColor 250 100 50
     SetBackgroundColor 60 30 0
     PlayAlertSound 6 300
+    CustomAlertSoundOptional "k5.mp3" 300
     PlayEffect Orange
     MinimapIcon 2 Orange Circle
+
+# nom nom nom nom
+Show
+    Class Currency
+    BaseType "Exalted Orb"
+    SetFontSize 50
+    SetTextColor 250 100 50
+    SetBackgroundColor 60 30 0
+    PlayAlertSound 6 300
+    CustomAlertSoundOptional "k4.mp3" 300
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle
 
 # nom nom nom
 Show
     Class Currency
     BaseType "Orb of Alchemy" "Chaos Orb" "Vaal Orb" "Orb of Regret" "Orb of Annulment" "Blessed Orb" "Sacred Orb" "Orb of Scouring" "Orb of Horizons" "Orb of Binding"
-    SetFontSize 36
+    SetFontSize 40
     SetBackgroundColor 60 30 0
     PlayAlertSound 2 100
+    CustomAlertSoundOptional "k3.mp3" 300
     PlayEffect White Temp
     MinimapIcon 2 White Circle
 
@@ -242,9 +269,10 @@ Show
 Show
     Class Currency
     BaseType "Orb of Alteration" "Orb of Chance" "Regal Orb" "Glassblower's Bauble" "Gemcutter's Prism" "Cartographer's Chisel" "Instilling Orb" "Enkindling Orb"
-    SetFontSize 36
+    SetFontSize 40
     SetBackgroundColor 60 30 0
     PlayAlertSound 2 100
+    CustomAlertSoundOptional "k2.mp3" 300
     PlayEffect Grey Temp
     MinimapIcon 2 Grey Circle
 
@@ -252,26 +280,29 @@ Show
 Show
     Class Currency
     BaseType "Orb of Transmutation" "Orb of Augmentation" "Chromatic Orb" "Jeweller's Orb" "Orb of Fusing" "Armourer's Scrap" "Blacksmith's Whetstone"
-    SetFontSize 36
+    SetFontSize 40
     SetBackgroundColor 60 30 0
     PlayAlertSound 2 100
+    CustomAlertSoundOptional "k1.mp3" 300
     PlayEffect Grey Temp
 
 Show
     Class Currency
     BaseType "Portal Scroll"
+    SetFontSize 40
     SetBorderColor 0 0 150
 
 Show
     Class Currency
     BaseType "Scroll of Wisdom"
+    SetFontSize 40
     SetBorderColor 150 0 0
 
 # Safety (God-Tier)
 Show
     Class Currency
     DropLevel >= 65
-    SetFontSize 42
+    SetFontSize 50
     SetTextColor 250 100 50
     SetBackgroundColor 60 30 0
     PlayAlertSound 6 300
@@ -307,11 +338,21 @@ Show
 # ------------------------------
 
 Show
+    Class "Map Fragment"
+    SetFontSize 50
+    SetTextColor 220 0 150
+    SetBackgroundColor 60 60 60
+    SetBorderColor 220 0 150
+    PlayEffect Purple
+    PlayAlertSound 5 100
+    MinimapIcon 2 Purple Square
+
+Show
     Class Map
     Rarity Unique
-    SetFontSize 42
+    SetFontSize 50
     SetTextColor 220 150 0
-    SetBackgroundColor 81 81 81
+    SetBackgroundColor 60 60 60
     SetBorderColor 220 150 0
     PlayEffect Brown
     PlayAlertSound 1 100
@@ -320,9 +361,9 @@ Show
 Show
     Class Map
     MapTier >= 11
-    SetFontSize 42
+    SetFontSize 50
     SetTextColor 220 0 0
-    SetBackgroundColor 81 81 81
+    SetBackgroundColor 60 60 60
     SetBorderColor 220 0 0
     PlayEffect Red
     PlayAlertSound 5 100
@@ -331,8 +372,9 @@ Show
 Show
     Class Map
     MapTier >= 6
+    SetFontSize 40
     SetTextColor 200 180 0
-    SetBackgroundColor 81 81 81
+    SetBackgroundColor 60 60 60
     SetBorderColor 200 180 0
     PlayEffect Yellow Temp
     PlayAlertSound 4 100
@@ -340,8 +382,9 @@ Show
 
 Show
     Class Map
+    SetFontSize 40
     SetTextColor 200 200 200
-    SetBackgroundColor 81 81 81
+    SetBackgroundColor 60 60 60
     SetBorderColor 200 200 200
     PlayEffect White Temp
     PlayAlertSound 4 100
@@ -365,6 +408,21 @@ Show
 
 Show
     BaseType "Opal Wand" "Tornado Wand" "Prophecy Wand" "Profane Wand"
+    ItemLevel >= 68
+
+# Bow (prefer at least 1.4 base attack speed)
+Show
+    BaseType "Thicket Bow" "Spine Bow" "Maraketh Bow"
+    ItemLevel >= 86 # T1 mods
+    SetBorderColor 180 90 24
+
+Show
+    BaseType "Thicket Bow" "Spine Bow" "Maraketh Bow"
+    ItemLevel >= 83 # T1 %damage
+    SetBorderColor 120 60 8
+
+Show
+    BaseType "Thicket Bow" "Steelwood Bow" "Spine Bow" "Imperial Bow" "Harbinger Bow" "Maraketh Bow"
     ItemLevel >= 68
 
 # Belts
@@ -404,10 +462,39 @@ Show
 Show
     Class Amulets
 
+Show
+    Class Quiver
+    ItemLevel >= 86 # T1 bow %damage
+    SetBorderColor 180 90 24
+
+Show
+    Class Quiver
+    ItemLevel >= 70 # bow attacks +1 arrow
+    SetBorderColor 120 60 8
+
 # Jewels
+Show
+    Class "Abyss Jewel"
+    SetFontSize 40
+    SetBackgroundColor 8 24 81
+    PlayEffect Grey
+    PlayAlertSound 3 100
+    MinimapIcon 2 Grey Pentagon
+    Continue
+
+Show
+    BaseType "Large Cluster Jewel" "Medium Cluster Jewel" "Small Cluster Jewel"
+    SetFontSize 40
+    SetBackgroundColor 8 24 81
+    PlayEffect Cyan
+    PlayAlertSound 3 100
+    MinimapIcon 2 Cyan Pentagon
+    Continue
+
 Show
     Class Jewel
     ItemLevel >= 84 # T1 everything
+
     SetBorderColor 180 90 24
 
 Show
@@ -482,10 +569,13 @@ Show
     SetBorderColor 120 60 8
 
 # ------------------------------
-# -- Equipment
+# -- Equipment (Catch-All)
 # ------------------------------
 
-# 6-Socket
+# 5+ Links
+    LinkedSockets >= 5
+
+# 6 Sockets
 Show
     Sockets 6
 
@@ -494,12 +584,41 @@ Show
     HasInfluence Shaper Elder Crusader Hunter Redeemer Warlord
 
 # ------------------------------
+# -- Leveling
+# ------------------------------
+# -- Witch, Shadow
+
+Show
+    AreaLevel < 68
+    Class Belts Rings Amulets Flask Quiver Jewel
+
+Show
+    AreaLevel < 68
+    BaseEnergyShield >= 10
+
+Show
+    AreaLevel < 68
+    Sockets >= 3
+
+Show
+    AreaLevel < 68
+    LinkedSockets >= 3
+    PlayEffect Grey
+
+Show
+    AreaLevel < 68
+    LinkedSockets >= 4
+    PlayEffect White
+
+# ------------------------------
 # -- Other
 # ------------------------------
 
 Show
-    Class Atlas Blueprints Contracts Delve Expedition Fishing Heist Hideout Incubators Incursion Labyrinth Leaguestones Metamorph Microtransactions Misc Souls Pieces Trinkets
-    #Class Atlas Blueprints Contracts Delve Expedition Fishing Heist Hideout Incubators Incursion Labyrinth Leaguestones Lifeforce Metamorph Microtransactions Misc Oil Souls Pieces Trinkets
-    
+    Class Atlas Blueprints Contracts Delve Expedition Fishing Heist Hideout Incubator Incursion Labyrinth Leaguestones Metamorph Memory Microtransaction Misc Sentinel Souls Pieces Trinkets
+    SetFontSize 40
+    SetBorderColor 0 150 0
+    PlayEffect Green Temp
+
 Hide
     Rarity <= Rare
